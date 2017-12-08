@@ -1,9 +1,9 @@
-<h1>Delivery Food</h1>
+<h1><%= t("views.user_mailer.account_activation.title") %></h1>
 
-<p>t("views.user_mailer.account_activation.hi") <%= @user.name %>,</p>
+<p><%= t("views.user_mailer.account_activation.hi") %> <%= @user.name %>,</p>
 
 <p>
-t("views.user_mailer.account_activation.welcome")
+<%= t("views.user_mailer.account_activation.welcome") %>
 </p>
 
 <%= link_to t("views.user_mailer.account_activation.activate"), edit_account_activation_url(@user.activation_token,

@@ -2,6 +2,8 @@ vi:
   mailers:
     user_mailer:
       activate: "Xác nhận tài khoản"
+      reset: "Đặt lại mật khẩu"
+
   controllers:
     account_activations:
       success: "Tài khoản đã được xác nhận!"
@@ -14,12 +16,29 @@ vi:
         message1: "Tài khoản chưa được xác nhận. "
         message2: "Kiểm tra email của bạn để biết liên kết xác nhận."
         danger: "Kết hợp email/mật khẩu không hợp lệ"
+    password_resets:
+      create:
+        sent: "Email được gửi bằng hướng dẫn đặt lại mật khẩu"
+        danger: "Không tìm thấy địa chỉ email"
+      update:
+        errors: "không thể để trống"
+        success: "Mật khẩu đã được đặt lại."
+      check_expiration:
+        danger: "Đặt lại mật khẩu đã hết hạn."
+
   views:
     user_mailer:
       account_activation:
         hi: "Xin chào"
         welcome: "Chào mừng bạn tới với Delivery Food! Nhấp vào liên kết bên dưới để kích hoạt tài khoản của bạn:"
         activate: "Kích hoạt"
+    password_resets:
+        title: "Đặt lại mật khẩu"
+        desc1: "Để đặt lại mật khẩu của bạn, nhấp vào liên kết dưới đây:"
+        button_name: "Đặt lại mật khẩu"
+        desc2: "Liên kết này sẽ hết hạn trong hai giờ."
+        desc3: "Nếu bạn không yêu cầu đặt lại mật khẩu, vui lòng bỏ qua email này và
+mật khẩu của bạn sẽ vẫn như nó được."
     users:
       new:
         register: "Đăng ký"
@@ -35,6 +54,17 @@ vi:
         username: "Tên đăng nhập"
         password: "Mật khẩu"
         remember: "Lưu tài khoản"
+        forgot: "(Quên mật khẩu)"
     layouts:
         login: "Đăng nhập"
         close: "Đóng"
+    password_resets:
+      new:
+        email: "Địa chỉ email"
+        title: "Quên mật khẩu"
+        submit: "Gửi đi"
+      edit:
+        title: "Đặt lại mật khẩuĐặt lại mật khẩu"
+        password: "Mật khẩu mới"
+        password_confirmation: "Xác nhận mật khẩu"
+        submit: "Cập nhật mật khẩu"
