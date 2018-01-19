@@ -37,6 +37,7 @@ vi:
   views:
     user_mailer:
       account_activation:
+        title: "Delivery Food"
         hi: "Xin chào"
         welcome: "Chào mừng bạn tới với Delivery Food! Nhấp vào liên kết bên dưới để kích hoạt tài khoản của bạn:"
         activate: "Kích hoạt"
@@ -58,10 +59,24 @@ mật khẩu của bạn sẽ vẫn như nó được."
         address: "Địa chỉ"
         phone_number: "Số điện thoại"
       show:
+        type: "Kiểu người dùng"
         email: "Email"
         phone_number: "Số điện thoại"
         address: "Địa chỉ"
         by_chef: "Các món ăn của đầu bếp này"
+        admin: "Kiểu người dùng: Quản trị viên"
+        chef: "Kiểu người dùng: Đầu bếp"
+        shipper: "Kiểu người dùng: Nhân viên giao hàng"
+        customer: "Kiểu người dùng: Khách hàng"
+        authority: "Ủy quyền"
+      update:
+        danger: "Phân quyền người dùng lỗi!"
+        danger2: "Bạn chưa đăng nhập hay không phải là quản trị viên!"
+        success: "Phân quyền thành công!"
+        customer: "Khách hàng"
+        shipper: "Nhân viên giao hàng"
+        chef: "Đầu bếp"
+        title: "Ủy quyền"
     sessions:
       new:
         username: "Tên đăng nhập"
@@ -85,7 +100,7 @@ mật khẩu của bạn sẽ vẫn như nó được."
       profile: "Cá nhân"
       orders: "Đơn hàng"
       header:
-        list: "Danh sách thực phẩm"
+        list: "Danh sách người dùng"
         all: "Tất cả"
         lunch: "Cơm trưa"
         drink: "Đồ uống"
@@ -175,12 +190,6 @@ mật khẩu của bạn sẽ vẫn như nó được."
         pay: "Thanh toán"
         info: "Thông tin đơn hàng"
         total: "Tổng tiền"
-    users:
-      show:
-        email: "Email"
-        phone_number: "Số điện thoại"
-        address: "Địa chỉ"
-        by_chef: "Các món ăn của đầu bếp này"
     orders:
       created_at: "Đặt vào:"
       danger: "Bạn không có quyền truy cập vào trang này !"

@@ -20,5 +20,4 @@ class UserMailer < ApplicationMailer
     @user = user
     mail to: user.email, subject: t("mailers.user_mailer.reset")
   end
-  end
 end

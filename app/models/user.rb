@@ -30,6 +30,10 @@ class User < ApplicationRecord
     where(user_type: Settings.user_type.chef)
   }
 
+  scope :shipper, -> {
+    where(user_type: Settings.user_type.shipper)
+  }
+
   class << self
     def digest string
       cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST : BCrypt::Engine.cost

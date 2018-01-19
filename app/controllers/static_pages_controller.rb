@@ -14,7 +14,9 @@ class StaticPagesController < ApplicationController
     @all_orders = Order.all.paginate page: params[:page]
     @new_foods = Food.newfood
     @hot_foods = Food.hotfood
+    @users = User.all
     @hot_chefs = User.hotchef
+    @shippers = User.shipper
     @all_foods = Food.all.paginate page: params[:page], per_page: 18
 
     respond_to do |format|

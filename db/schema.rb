@@ -24,6 +24,16 @@ ActiveRecord::Schema.define(version: 20180117035351) do
     t.index ["user_id"], name: "index_carts_on_user_id"
   end
 
+  create_table "comment_foods", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.bigint "user_id"
+    t.bigint "food_id"
+    t.string "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["food_id"], name: "index_comment_foods_on_food_id"
+    t.index ["user_id"], name: "index_comment_foods_on_user_id"
+  end
+
   create_table "comments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "content"
     t.bigint "user_id"
@@ -47,6 +57,7 @@ ActiveRecord::Schema.define(version: 20180117035351) do
     t.bigint "food_category_id"
     t.bigint "user_id"
     t.float "rating_avg", limit: 24
+    t.integer "rate_count"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["food_category_id"], name: "index_foods_on_food_category_id"
@@ -126,6 +137,8 @@ ActiveRecord::Schema.define(version: 20180117035351) do
 
   add_foreign_key "carts", "foods"
   add_foreign_key "carts", "users"
+  add_foreign_key "comment_foods", "foods"
+  add_foreign_key "comment_foods", "users"
   add_foreign_key "foods", "food_categories"
   add_foreign_key "foods", "users"
   add_foreign_key "order_details", "foods"
